@@ -1,0 +1,191 @@
+@media screen and (max-width:700px){
+    
+/* RESPONSIVO DO HEADER */
+header .interface .nav_bar{
+    display: none;
+}
+
+header .interface .logo img{
+    margin-left: 0.5rem;
+}
+
+header .interface .busca{
+    background: transparent;
+}
+
+header .interface .busca input{
+    display: none;
+}
+
+header .interface .busca i{
+    color: #fff;
+    font-size: 2rem;
+    margin-left: 18rem;
+}
+
+/* HEADER DINÂMICO */
+header.rolar .interface .busca{
+    background-color: transparent;
+}
+
+header.rolar .interface .busca i{
+    color: #ffa800;
+}
+
+/* MENU MOBILE */
+.btn-open-menu{
+    display: block;
+}
+
+.btn-open-menu i{
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999999;
+    overflow: hidden;
+    transition: .6s;
+    display: block;
+}
+
+.menu-mobile.open{
+    width: 70%;
+}
+
+.menu-mobile.open ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-close{
+    padding: 2rem 4%;
+}
+
+.menu-mobile .btn-close i{
+    color: #ffa800;
+    font-size: 4.5rem;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+    list-style-type: none;
+}
+
+.menu-mobile nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 2.5rem;
+    display: block;
+    transition: .5s;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #ffa800;
+    font-weight: 600;
+}
+
+.overlay-menu{
+    display: none;
+    background-color: #000000a8;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    transition: .6s ease-in-out;
+}
+
+/* RESPONSIVO DA HERO */
+
+section.hero .interface .txt-hero{
+    width: 90%;
+}
+
+
+/* RESPONSIVO DO RECEITAS */
+
+section.receitas .interface .cards-receitas, section.receitas .interface .cards-receitas-plus{
+    flex-direction: column;
+    align-items: center;
+}
+
+section.receitas .interface .cards-receitas .card, section.receitas .interface .cards-receitas-plus .card{
+    width: 80%;
+}
+
+/* RESPONSIVO DAS CATEGORIAS */
+
+section.categorias .cat-cards{
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+/* ESTILO DO SOBRE */
+section.sobre{
+    padding: 5rem 0;
+}
+
+section.sobre .interface{
+    flex-direction: column;
+    align-items: center;
+}
+
+section.sobre .interface .img-sobre{
+    width: 80%;
+}
+
+section.sobre .interface .img-sobre img{
+    width: 25rem;
+}
+
+section.sobre .interface .txt-sobre{
+    width: 100%;
+}
+
+section.sobre .interface .txt-sobre p{
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+
+/* ESTILO DO LOGIN SUAS RECEITAS */
+
+section.suas-receitas .interface{
+    flex-direction: column;
+    height: 45rem;
+    width: 100%;
+    max-width: 90rem;
+    align-items: start;
+    margin-right: 0rem ;
+}
+
+section.suas-receitas .interface .txt-suas-receitas{
+    text-align: center;
+    width: 100%;
+    border-radius: 1.5rem 1.5rem 0 0;
+}
+
+section.suas-receitas .interface .login{
+    height: 45rem;
+    width: 100%;
+}
+
+section.suas-receitas .interface .login form{
+    border-radius: 0 0 1.5rem 1.5rem;
+}
+
+section.suas-receitas .interface .login form .input-box i{
+    left: 27.5rem;
+}
+
+}

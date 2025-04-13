@@ -1,0 +1,556 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ESTILOS GERAIS */
+
+html{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+} 
+
+.interface{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+body{
+    height: 100vh;
+}
+
+button.btn{
+    background-color: #ffa800;
+    border: none;
+    padding: 1rem 2rem;
+    width: 13rem;
+    border-radius: 1rem;
+    transition: .5s;
+}
+
+
+button.btn a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+button.btn:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 1px 1px 25px 5px #0000002a;
+}
+
+/* ESTILO DO HEADER */
+header{
+    background: transparent;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header .interface{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header .interface .logo img{
+    width: 10rem;
+    margin-left: 2rem;
+}
+
+header .interface .logo img.logo_amarela{
+    display: none;
+}
+
+header .interface .nav_bar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+header .interface .nav_bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: .5s;
+    font-size: 1.6rem;
+}
+
+header .interface .nav_bar ul li a:hover{
+    transform: scale(1.08);
+    /* border-bottom: 1px solid #fff; */
+}
+
+header .interface .busca{
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+header .interface .busca input{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+header .interface .busca input::-webkit-search-cancel-button{
+    display: none;
+}
+
+header .interface .busca i{
+    color: #ffa800;
+}
+
+/* HEADER DINÂMICO */
+
+header.rolar .interface .logo .logo_branca{
+    display: none;
+}
+
+header.rolar .interface .logo .logo_amarela{
+    display: block;
+    width: 10rem;
+}
+
+header.rolar{
+    background-color: #fff;
+    width: 100%;
+    transition: .5s;
+    box-shadow: 3px 0 20px 10px #0000002a;
+}
+
+header.rolar .interface .nav_bar ul li a{
+    color: #ffa800;
+}
+
+header.rolar .interface .busca{
+    background-color: #ffa800;
+}
+
+header.rolar .interface .busca input::placeholder{
+    color: #fff;
+}
+
+
+header.rolar .interface .busca i{
+    color: #fff;
+}
+
+header.rolar .interface .btn-open-menu i{
+    color: #ffa800;
+}
+
+/* --------------- */
+/* MENU MOBILE */
+.menu-mobile{
+    display: none;
+}
+
+.btn-open-menu{
+    display: none;
+}
+
+/* ESTILO DA HERO */
+section.hero{
+    height: 99vh;
+    background-image: url(imagens/bg-hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+section.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+section.hero .interface{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+section.hero .interface .txt-hero{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    /* opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out; */
+}
+
+/* section.hero .interface .txt-hero.show{
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+section.hero .interface .txt-hero h1{
+    color: #ffa800;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+    border-bottom: 3px solid #ffa800;
+    padding: 0 0 10px 0;
+}
+
+section.hero .interface .txt-hero h1 span{
+    font-weight: 800;
+}
+
+section.hero .interface .txt-hero p{
+    color: #ffa800;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ESTILO DO RECEITAS */
+section.receitas{
+    background-color: #ffa800;
+}
+
+section.receitas .interface{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+}
+
+section.receitas .interface .txt-receitas h1{
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+section.receitas .interface .cards-receitas, section.receitas .interface .cards-receitas-plus{
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+section.receitas .interface .cards-receitas .card, section.receitas .interface .cards-receitas-plus .card{
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 25px 15px #0000002a;
+    margin-bottom: 3rem;
+}
+
+section.receitas .interface .cards-receitas .card img, section.receitas .interface .cards-receitas-plus .card img{
+    width: 21.5rem;
+    margin-bottom: 1rem;
+}
+
+section.receitas .interface .cards-receitas .card h1, section.receitas .interface .cards-receitas-plus .card h1{
+    font-size: 2.2rem;
+    color: #ffa800;
+    margin-bottom: 1rem;
+}
+
+section.receitas .interface .cards-receitas .card button, section.receitas .interface .cards-receitas-plus .card button{
+    width: 100%;
+}
+
+section.receitas .interface .ver-mais-receitas{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+section.receitas .interface .ver-mais-receitas button.btn{
+    background-color: #fff;
+    font-weight: 600;
+    color: #ffa800;
+}
+
+section.receitas .interface .cards-receitas-plus{
+    display: none;
+}
+
+/* ESTILO DAS CATEGORIAS */
+section.categorias{
+    display: flex;
+    padding: 4.5rem 0;
+}
+
+section.categorias h1{
+    color: #ffa800;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+section.categorias .cat-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+section.categorias .cat-cards .cat-card{
+    text-align: center;
+    padding: 2rem 1.5rem;
+    height: 16.9rem;
+    width: 29.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+
+section.categorias .cat-cards .cat-card:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+section.categorias .cat-cards .cat-card p{
+    color: #fff;
+    font-size: 2rem;
+}
+
+section.categorias .cat-cards .cat-card.sal{
+    background-image: url(imagens/salgado.png);
+    background-size: cover;
+}
+
+section.categorias .cat-cards .cat-card.doce{
+    background-image: url(imagens/doce.png);
+    background-size: cover;
+}
+
+section.categorias .cat-cards .cat-card.fast{
+    background-image: url(imagens/fast-food.png);
+    background-size: cover;
+}
+
+section.categorias .ver-todas{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+/* ESTILO DO SOBRE */
+section.sobre{
+    padding: 5rem 0;
+}
+
+section.sobre .interface{
+    display: flex;
+    align-items: center;
+}
+
+section.sobre .interface .img-sobre{
+    width: 50%;
+}
+
+section.sobre .interface .img-sobre img{
+    width: 45rem;
+}
+
+section.sobre .interface .txt-sobre{
+    width: 50%;
+}
+
+section.sobre .interface .txt-sobre p{
+    text-align: right;
+    color: #ffa800;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+section.sobre .interface .txt-sobre p span{
+    font-weight: 800;
+}
+
+/* ESTILO DO LOGIN SUAS RECEITAS */
+
+section.suas-receitas{
+    padding: 2.5rem 0;
+    margin-bottom: 5rem;
+}
+
+section.suas-receitas .interface{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    width: 110rem;
+}
+
+section.suas-receitas .interface .txt-suas-receitas{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffe77c;
+    height: 100%;
+    width: 50%;
+    padding: 0 2.5rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+}
+
+section.suas-receitas .interface .txt-suas-receitas h1{
+    color: #ffa800;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+section.suas-receitas .interface .txt-suas-receitas h1 span{
+    font-weight: 800;
+}
+
+section.suas-receitas .interface .txt-suas-receitas p{
+    color: #ffa800;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 1rem 0 0 0;
+}
+
+section.suas-receitas .interface .login{
+    height: 40rem;
+    width: 50%;
+}
+
+section.suas-receitas .interface .login form{
+    background-color: #ffa800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 1.5rem 1.5rem 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+section.suas-receitas .interface .login form h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+}
+
+section.suas-receitas .interface .login form .input-box{
+    position: relative;
+    width: 100%;
+}
+
+section.suas-receitas .interface .login form .input-box input{
+    background: transparent;
+    border: 1px solid #ffffffb2;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    outline: none;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    width: 70%;
+}
+
+section.suas-receitas .interface .login form .input-box input::placeholder{
+    color: #ffffffb2;
+}
+
+section.suas-receitas .interface .login form .input-box i{
+    color: #fff;
+    position: absolute;
+    left: 38.5rem; 
+    top: 33%;
+    transform: translateY(-50%);
+}
+
+section.suas-receitas .interface .login form input.btn-entrar{
+    background-color: #fff;
+    outline: none;
+    border: none; 
+    padding: 0.5rem 1rem;
+    width: 50%;
+    border-radius: 1rem;
+    color: #ffa800;
+    font-weight: 500;
+    box-shadow: 1px 1px 25px 5px #00000018;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    margin-bottom: 1rem;
+}
+
+section.suas-receitas .interface .login form input.btn-entrar:hover{
+    border-radius: 2px;
+    width: 53%;
+}
+
+section.suas-receitas .interface .login form p{
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+section.suas-receitas .interface .login form p a{
+    color: #fcf1c4;
+    text-decoration: none;
+    transition: .5s;
+}
+
+section.suas-receitas .interface .login form p a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* ESTILO DO FOOTER */
+footer{
+    background-color: #ffa800;
+}
+
+footer .interface{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .interface img{
+    width: 10rem;
+    margin: 1rem 0;
+}
+
+footer .interface hr{
+    background-color: #fff;
+    height: 1px;
+    width: 100%;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+footer .interface p{
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+footer .interface p a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .interface p a:hover{
+    text-decoration: underline;
+}
