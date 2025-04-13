@@ -110,6 +110,10 @@ section.hero .interface .txt-hero{
     width: 90%;
 }
 
+section.hero::before{
+    background: rgba(0, 0, 0, 0.623);
+}
+
 
 /* RESPONSIVO DO RECEITAS */
 
@@ -173,6 +177,7 @@ section.suas-receitas .interface .txt-suas-receitas{
     text-align: center;
     width: 100%;
     border-radius: 1.5rem 1.5rem 0 0;
+    background-color: #fff0af;
 }
 
 section.suas-receitas .interface .login{
